@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kafka-audit"
+version = "1.0.0"
+description = "Offline read_committed auditor for Kafka magic=2 uncompressed RecordBatch streams"
+requires-python = ">=3.9"
+
+[project.scripts]
+kafka-audit = "kafka_audit.cli:main"
+
+[tool.setuptools]
+packages = ["kafka_audit"]
